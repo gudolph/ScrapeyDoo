@@ -32,7 +32,7 @@ var databaseUri = "mongodb://localhost/Article";
 if (process.env.MONGODB_URI) {
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect(databaseUri);
+  mongoose.connect(databaseUri, { useNewUrlParser: true });
 }
 
 var dbConnect = mongoose.connection;

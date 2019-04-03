@@ -22,12 +22,12 @@ var app = express();
 app.use(logger("dev"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.json());s
 // Make public a static folder
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-var databaseUri = "mongodb://localhost/Article";
+var databaseUri = "mongodb://localhost/scrape";
 
 if (process.env.MONGODB_URI) {
   mongoose.connect(process.env.MONGODB_URI);
